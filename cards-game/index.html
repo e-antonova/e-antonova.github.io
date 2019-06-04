@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Браузерная игра "Найди баг"</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css">
+    </head>
+    <body>
+        <section class="menu" id="menu">
+            <div class="menu__wrap">
+                <h1 class="menu__title">Выберите уровень сложности:</h1>
+                <p class="menu__description">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <input class="menu__input" type="radio" id="easy" name="complexity" value="easy" checked>
+                        <label class="menu__label" for="easy">Простой</label>
+                    </li>
+                    <li class="menu__item">
+                        <input class="menu__input" type="radio" id="medium" name="complexity" value="medium">
+                        <label class="menu__label" for="medium">Средний</label>
+                    </li>
+                    <li class="menu__item">
+                        <input class="menu__input" type="radio" id="hard" name="complexity" value="hard">
+                        <label class="menu__label" for="hard">Сложный</label>
+                    </li>
+                </ul>
+
+                <button class="menu__button" id="button">Начать игру</button>
+            </div>
+
+            <div class="menu__decor">
+                <img class="menu__cards" src="img/cards.png" alt="Изображение двух карт">
+            </div>
+        </section>
+
+        <section class="game"></section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
