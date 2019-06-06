@@ -1,4 +1,3 @@
-// объявление переменных
 const difficulty = {
         easy: 3,
         medium: 6,
@@ -28,7 +27,7 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 };
 
-// для выбора карты
+// функция выбора карты
 function pickCard(bug) {
     if(canPlay === true) {
         let cardPicture = this.querySelectorAll('.cards__front')[0];
@@ -38,7 +37,7 @@ function pickCard(bug) {
         this.classList.add('active');
         canPlay = false;
     } else {
-    // для перезагрузки игры
+    // для перезапуска игры
         field.innerHTML = '';
         menu.classList.remove('hidden');
         canPlay = true;
@@ -80,5 +79,5 @@ function play() {
     });
 };
 
-const btn = document.getElementById('button');
+const btn = document.getElementById('start-game');
 btn.addEventListener('click', play);

@@ -2,8 +2,7 @@ body {
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    background: url('img/background.png') no-repeat center;
-    background-size: cover;
+    background: url('img/background.png') repeat center;
 }
 
 .menu {
@@ -13,7 +12,7 @@ body {
 }
 
 .menu__wrap {
-    padding-left: 50px;
+    padding-left: 5%;
     padding-right: 50px;
 }
 
@@ -25,11 +24,11 @@ body {
 }
 
 .menu__title {
-    margin-top: 130px;
+    margin-top: 70px;
     margin-bottom: 0;
     font-weight: bold;
-    font-size: 57px;
-    line-height: 67px;
+    font-size: 37px;
+    line-height: 47px;
     color: #FFFFFF;
     text-shadow: 1px 1px 2px black, 0 0 1em rgba(0,0,0,0.3);
 }
@@ -54,8 +53,8 @@ body {
     position: relative;
     padding-bottom: 23px;
     font-weight: bold;
-    font-size: 50px;
-    line-height: 59px;
+    font-size: 40px;
+    line-height: 39px;
     color: rgba(197,197,197,0.9);
     cursor: pointer;
 }
@@ -79,20 +78,20 @@ body {
 
 .menu__input:checked ~ .menu__label::before {
     position: absolute;
-    top: 19px;
-    left: -45px;
+    top: 10px;
+    left: -35px;
     content: "";
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     background: #D62B2E;
     transform: rotate(45deg);
     box-shadow: 0 5px 5px -2px rgba(0,0,0,0.3);
 }
 
 .menu__button {
-    width: 352px;
-    height: 95px;
+    width: 252px;
+    height: 68px;
     margin-bottom: 50px;
     background: #D62B2E;
     border-radius: 7px;
@@ -100,8 +99,8 @@ body {
     border: 0;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
-    line-height: 37px;
+    font-size: 22px;
+    line-height: 27px;
     color: #FFFFFF;
     cursor: pointer;
     text-shadow: 1px 1px 2px black, 0 0 1em rgba(0,0,0,0.3);
@@ -114,6 +113,33 @@ body {
 .menu__button:active {
     background: radial-gradient(#e67f81, #D62B2E);
     box-shadow: none;
+}
+
+@media (min-width: 1100px) {
+    .menu__title {
+        margin-top: 130px;
+        font-size: 57px;
+        line-height: 67px;
+    }
+
+    .menu__item {
+        font-size: 50px;
+        line-height: 59px;
+    }
+
+    .menu__button {
+        width: 352px;
+        height: 95px;
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    .menu__input:checked ~ .menu__label::before {
+        top: 19px;
+        left: -45px;
+        width: 18px;
+        height: 18px;
+    }
 }
 
 .menu__decor {
@@ -137,19 +163,31 @@ body {
 
 @media (min-width: 1120px) {
     .menu__decor {
-        top: 39%;
         right: 5%;
+    }
+
+    .menu__decor img {
+        width: 80%;
+        height: 80%;
+    }
+
+}
+
+@media (min-width: 1250px) {
+    .menu__decor img {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .menu__decor {
+        top: 50%;
     }
 
     .menu__decor img {
         width: 100%;
         height: 100%;
-    }
-}
-
-@media (min-width: 1120px) {
-    .menu__decor {
-        top: 66%;
     }
 }
 
@@ -170,7 +208,6 @@ body {
 .game__medium,
 .game__easy {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,11 +232,18 @@ body {
     position: relative;
     width: 218px;
     height: 341px;
-    margin-right: 24px;
-    margin-bottom: 24px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
     border-radius: 10px;
     perspective: 800px;
+}
+
+@media (min-width: 900px) {
+    .cards__wrap {
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
 }
 
 .cards__wrap:hover {
@@ -218,15 +262,25 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     transition: 0.8s;
     backface-visibility: hidden;
+}
+
+@media (min-width: 900px) {
+    .cards__back,
+    .cards__front,
+    .cards__bug {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .cards__back {
     z-index: 100;
     background: url('img/cards-back.png') no-repeat center;
+    background-size: cover;
 }
 
 .cards__front {
@@ -234,6 +288,7 @@ body {
     z-index: 1;
     transform: rotateY(180deg);
     background: url('img/cards-end.png') no-repeat center;
+    background-size: cover;
 }
 
 .cards__bug {
@@ -241,6 +296,7 @@ body {
     z-index: 1;
     transform: rotateY(180deg);
     background: url('img/cards-bug.png') no-repeat center;
+    background-size: cover;
 }
 
 .cards__wrap.active .cards__back {
