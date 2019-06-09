@@ -27,6 +27,12 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 };
 
+function reloadGame() {
+    field.innerHTML = '';
+    menu.classList.remove('hidden');
+    canPlay = true;
+};
+
 // функция выбора карты
 function pickCard(bug) {
     if(canPlay === true) {
@@ -37,10 +43,7 @@ function pickCard(bug) {
         this.classList.add('active');
         canPlay = false;
     } else {
-    // для перезапуска игры
-        field.innerHTML = '';
-        menu.classList.remove('hidden');
-        canPlay = true;
+        reloadGame();
     }
 };
 
